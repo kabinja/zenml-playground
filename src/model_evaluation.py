@@ -5,7 +5,7 @@ from sklearn.base import ClassifierMixin
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from zenml.steps import step, Output
 
-@step(enable_cache=False)
+@step(enable_cache=False, experiment_tracker="mlflow_tracker")
 def evaluate_model(model: ClassifierMixin, X_test: ndarray, y_test: ndarray) -> Output(
     accuracy = float, precision = float, recall = float, f1 = float
     ):

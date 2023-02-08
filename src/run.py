@@ -14,3 +14,7 @@ def run_pipeline():
         evaluate_model = evaluate_model(),
     )  
     training.run()
+
+
+if __name__ == "__main__":
+    run_pipeline()
