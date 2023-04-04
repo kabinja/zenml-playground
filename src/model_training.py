@@ -14,8 +14,9 @@ class ModelParameters(BaseParameters):
         "random_state": 42
     }
 
-@step(enable_cache=False)
+@step(enable_cache=False, experiment_tracker="mlflow_tracker")
 def train_model(X_train: ndarray, y_train: ndarray, parameters: ModelParameters) -> Output(model = ClassifierMixin):
+    mlflow.log_params(parameters.arguments)
     model = RandomForestClassifier(**parameters.arguments)
     model.fit(X_train, y_train)
     return model
