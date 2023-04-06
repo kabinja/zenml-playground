@@ -13,7 +13,7 @@ if [[ "$CURRENT_STACK" != "$STACK" ]]
         zenml stack down
         zenml down
         zenml stack set $STACK
-        zenml up
+        zenml up --docker
         zenml stack up
 fi
 

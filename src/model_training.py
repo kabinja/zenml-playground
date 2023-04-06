@@ -9,8 +9,8 @@ from zenml.steps import step, Output, BaseParameters
 class ModelParameters(BaseParameters):
     name: str = "test1"
     arguments = {
-        "n_estimators": 50,
-        "max_depth": 20, 
+        "n_estimators": 10,
+        "max_depth": 5, 
         "random_state": 42
     }
 
