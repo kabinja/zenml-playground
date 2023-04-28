@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf ~/.config/zenml
+
 python -m pip install --upgrade pip
 
 pip install "zenml[server]"
