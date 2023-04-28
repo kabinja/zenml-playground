@@ -2,8 +2,6 @@ import mlflow
 from numpy import ndarray 
 from sklearn.base import ClassifierMixin
 from sklearn.ensemble import RandomForestClassifier
-from zenml.client import Client
-from zenml.integrations.mlflow.experiment_trackers import MLFlowExperimentTracker
 from zenml.steps import step, Output, BaseParameters
 
 class ModelParameters(BaseParameters):

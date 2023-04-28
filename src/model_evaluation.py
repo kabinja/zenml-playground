@@ -4,7 +4,7 @@ from numpy import ndarray
 from sklearn.base import ClassifierMixin
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, mean_squared_error
 from zenml.steps import step, Output
-from mlflow.models.signature import ModelSignature, infer_signature
+from mlflow.models.signature import ModelSignature
 from mlflow.types.schema import Schema, ColSpec
 
 @step(enable_cache=False, experiment_tracker="mlflow_tracker")
